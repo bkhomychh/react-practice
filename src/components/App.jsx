@@ -1,16 +1,18 @@
+import { Route, Routes } from 'react-router-dom';
+import Layout from './Layout/Layout';
+import HomePage from '../pages/HomePage';
+import { EventsPage } from 'pages/EventsPage';
+import{EventsSubPage} from './/EventsSubPage/EventsSubPage'
+
 export const App = () => {
   return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010102',
-      }}
-    >
-      React homework template
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />}/>
+      </Route>
+      <Route path='events' element={<EventsPage/>}>
+        <Route path=':id' element={<EventsSubPage/>}/>
+      </Route>
+    </Routes>
   );
 };

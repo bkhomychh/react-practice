@@ -4,7 +4,6 @@ import HomePage from '../pages/HomePage';
 import { EventsPage } from 'pages/EventsPage';
 import { EventsSubPage } from './/EventsSubPage/EventsSubPage';
 import SearchPage from 'pages/SearchPage';
-import SearchSubPage from './SearchSubPage/SearchSubPage';
 import EventDetailsPage from 'pages/EventDetailsPage';
 
 export const App = () => {
